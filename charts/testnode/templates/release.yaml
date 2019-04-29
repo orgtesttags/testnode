@@ -1,0 +1,15 @@
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2019-04-29T16:49:28Z"
+  deletionTimestamp: null
+  name: '{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}'
+spec:
+  gitCloneUrl: https://github.com/orgtesttags/testnode.git
+  gitHttpUrl: https://github.com/orgtesttags/testnode
+  gitOwner: orgtesttags
+  gitRepository: testnode
+  name: '{{ .Chart.Name }}'
+  releaseNotesURL: https://github.com/orgtesttags/testnode/releases/tag/v0.0.1
+  version: 0.0.1
+status: {}
